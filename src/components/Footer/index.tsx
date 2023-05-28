@@ -1,9 +1,10 @@
+import Link from "next/link";
+import { useState } from "react";
+
 import EmailIcon from "@/assets/svg/EmailIcon";
 import GitHubIcon from "@/assets/svg/GitHubIcon";
 import LinkedInIcon from "@/assets/svg/LinkedInIcon";
 import WhatsappIcon from "@/assets/svg/WhatsappIcon";
-import Link from "next/link";
-import { useState } from "react";
 
 const Footer = () => {
   const [hover, setHover] = useState({
