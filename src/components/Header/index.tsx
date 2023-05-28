@@ -1,14 +1,8 @@
 import { useRouter } from "next/router";
 import { useState } from "react";
+
 import LinesIcon from "@/assets/svg/LinesIcon";
 import XIcon from "@/assets/svg/XIcon";
-import {
-  Accordion,
-  AccordionButton,
-  AccordionIcon,
-  AccordionItem,
-  AccordionPanel,
-} from "@chakra-ui/react";
 
 const Header = () => {
   const [show, setShow] = useState(false);

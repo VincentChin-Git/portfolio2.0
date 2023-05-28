@@ -1,14 +1,13 @@
 import "@/styles/globals.css";
 import "nprogress/nprogress.css";
+
 import { ChakraProvider, extendTheme } from "@chakra-ui/react";
+import type { AppProps } from "next/app";
 import { useRouter } from "next/router";
-
 import nProgress from "nprogress";
-
 import { useEffect } from "react";
 
 import useNProgressColor from "@/hooks/useNProgressColor";
-import type { AppProps } from "next/app";
 
 export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter();
