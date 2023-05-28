@@ -8,7 +8,7 @@ const Header = () => {
   const [show, setShow] = useState(false);
   const router = useRouter();
   const navs = [
-    { path: "/home", title: "Home" },
+    { path: "/", title: "Home" },
     { path: "/about", title: "About Me" },
     { path: "/project", title: "Projects" },
     { path: "/contact", title: "Contact Me" },
@@ -17,7 +17,12 @@ const Header = () => {
     // switch to mobile mode in md
     <div className="mx-auto container relative ">
       <div className="relative flex justify-between items-center h-[70px] bg-[#fff8de] z-50 px-8">
-        <div className="font-bold text-2xl">VINCENT</div>
+        <div
+          className="font-bold text-2xl cursor-pointer"
+          onClick={() => router.push("/")}
+        >
+          VINCENT
+        </div>
         <div className=" flex-1"></div>
         <div className="relative hidden md:flex  items-center gap-10 text-lg animated">
           {navs.map((item) => {
