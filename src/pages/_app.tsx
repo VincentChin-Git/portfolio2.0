@@ -24,7 +24,7 @@ export default function App({ Component, pageProps }: AppProps) {
     global: {
       body: {
         color: "#333",
-        backgroundColor: "#fff8de",
+        backgroundColor: "#fffbed",
         padding: 0,
         margin: 0,
         fontFamily: "",
@@ -38,6 +38,7 @@ export default function App({ Component, pageProps }: AppProps) {
     router.events.on("routeChangeError", () => nProgress.done());
   }, [router.events]);
   // 修改nprogress color
+
   useNProgressColor("#99A98F");
   return (
     <>
