@@ -9,7 +9,7 @@ const Header = () => {
   const router = useRouter();
   const navs = [
     { path: "/", title: "Home" },
-    { path: "/about", title: "About Me" },
+    { path: "/skillset", title: "Skills Set" },
     { path: "/project", title: "Projects" },
     { path: "/contact", title: "Contact Me" },
   ];
