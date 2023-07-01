@@ -12,8 +12,8 @@ import ProjectElem from "./ProjectElem";
 
 export default function Project() {
   const projects = [
-    { title: "Administration System", cover: P1, url: "" },
-    { title: "E-Commerce Website", cover: P2, url: "" },
+    { title: "Administration System", cover: P1, url: "/project?project=1" },
+    { title: "E-Commerce Website", cover: P2, url: "/project?project=2" },
     {
       title: "To Do List",
       cover: P3,
