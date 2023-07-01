@@ -10,7 +10,7 @@ const Header = () => {
   const navs = [
     { path: "/", title: "Home" },
     { path: "/skillset", title: "Skills Set" },
-    { path: "/project", title: "Projects" },
+    { path: "/projects", title: "Projects" },
     { path: "/contact", title: "Contact Me" },
   ];
   return (
