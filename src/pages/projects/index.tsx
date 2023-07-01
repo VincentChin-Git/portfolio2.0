@@ -43,14 +43,14 @@ export default function Project() {
           My Recent Project
         </div>
 
-        <div className="my-8 sm:text-xl">
+        <div className="my-8 sm:text-xl mx-4">
           During my career, I have done 2 major projects independently. One of
           them is an e-commerce website for the printing industry, which
           includes product category, product details, item checkout etc. We
           design different product types for our clients.
         </div>
 
-        <div className="my-8 sm:text-xl">
+        <div className="my-8 sm:text-xl mx-4">
           Another one is the administration system, which was built for internal
           use of our clients. We provide a few major functions like customer
           management, quotation & invoices, product & stock management and staff

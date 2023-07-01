@@ -92,6 +92,7 @@ const Header = () => {
           <div
             key={nav.title}
             className=" font-medium my-8 cursor-pointer hover:font-bold"
+            onClick={nav.do}
           >
             {nav.title}
           </div>
