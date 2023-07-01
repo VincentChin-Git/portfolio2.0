@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import Image from "next/image";
 import { NextSeo } from "next-seo";
 
@@ -17,7 +18,13 @@ const Home = () => {
       <div className="container mx-auto ">
         {/* first section  */}
         <div className=" flex flex-wrap justify-center items-center mt-4 sm:mt-8 mb-8 lg:mb-24 mx-4 sm:mx-0">
-          <div className="  font-bold w-full sm:w-2/3 text-center sm:text-left">
+          <motion.div
+            className="  font-bold w-full sm:w-2/3 text-center sm:text-left"
+            initial={{ x: -400, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
             <div className="2xl:text-3xl lg:text-2xl text-xl mb-4">
               Hi There! 👋🏻 I&apos;m Vincent.
             </div>
@@ -27,8 +34,14 @@ const Home = () => {
             <div className=" 2xl:text-lg lg:text-base text-sm mb-4">
               Passionate in programming, I&apos;m polishing my skills every day.
             </div>
-          </div>
-          <div className="w-2/3 sm:w-1/3 mt-2 mb-4 sm:my-12">
+          </motion.div>
+          <motion.div
+            className="w-2/3 sm:w-1/3 mt-2 mb-4 sm:my-12"
+            initial={{ x: 400, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
             <Image
               src={ProfileImage}
               alt="Profile Image"
@@ -36,12 +49,18 @@ const Home = () => {
               width={1000}
               height={1000}
             />
-          </div>
+          </motion.div>
         </div>
 
         {/* second section  */}
         <div className="flex flex-wrap justify-center items-center sm:flex-row-reverse mb-24">
-          <div className=" w-full sm:w-2/3 font-medium max-w-[400px] sm:max-w-none sm:pl-[10%] px-8 sm:px-0">
+          <motion.div
+            initial={{ x: -400, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className=" w-full sm:w-2/3 font-medium max-w-[400px] sm:max-w-none sm:pl-[10%] px-8 sm:px-0"
+          >
             <div className="text-center font-bold 2xl:text-4xl lg:text-3xl text-2xl mb-8">
               LET ME INTRODUCE MYSELF
             </div>
@@ -65,8 +84,14 @@ const Home = () => {
               with Node.js and Modern Javascript Library and Frameworks like
               React.js and Next.js
             </div>
-          </div>
-          <div className=" w-full sm:w-1/3 flex items-center justify-center px-16 py-8 sm:p-0">
+          </motion.div>
+          <motion.div
+            initial={{ x: 400, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className=" w-full sm:w-1/3 flex items-center justify-center px-16 py-8 sm:p-0"
+          >
             <Image
               src={Avatar}
               alt="avatar"
@@ -74,7 +99,7 @@ const Home = () => {
               width={1000}
               height={1000}
             />
-          </div>
+          </motion.div>
         </div>
       </div>
       <div className="flex-1"></div>

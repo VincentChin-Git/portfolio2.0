@@ -79,7 +79,7 @@ const Header = () => {
         </div>
       </div>
       <div
-        className={`absolute top-[70px] overflow-hidden px-8 ${
+        className={`sm:hidden absolute top-[70px] overflow-hidden px-8 ${
           show ? "h-[260px]" : "h-0"
         } animated w-screen bg-[#fffbed]`}
         style={{
