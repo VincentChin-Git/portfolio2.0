@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@chakra-ui/react": "^2.5.5",
+    "@sendgrid/mail": "^7.7.0",
     "@types/node": "20.2.5",
     "@types/react": "18.2.7",
     "@types/react-dom": "18.2.4",
