@@ -27,9 +27,9 @@ export default function ProjectElem({
           <Image
             src={EyeIcon}
             alt=""
-            className=" w-[12.5%] p-1  rounded-full"
+            className=" w-[12.5%] p-1  rounded-full hover:scale-125"
           />
-          <div className=" text-white">{title}</div>
+          <div className=" text-white hover:text-black">{title}</div>
         </div>
       </div>
     </div>
