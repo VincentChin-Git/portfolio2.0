@@ -31,6 +31,7 @@ export default function App({ Component, pageProps }: AppProps) {
       },
     },
   };
+
   const theme = extendTheme({ breakpoints, styles });
   useEffect(() => {
     router.events.on("routeChangeStart", () => nProgress.start());
