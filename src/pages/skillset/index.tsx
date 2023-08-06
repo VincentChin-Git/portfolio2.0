@@ -25,6 +25,7 @@ import Sentry from "../../assets/programming/sentry.png";
 import UniApp from "../../assets/programming/uniapp.png";
 import Uview from "../../assets/programming/uview.png";
 import Vercel from "../../assets/programming/vercel.svg";
+import Vite from "../../assets/programming/vite.png";
 import VSCode from "../../assets/programming/vscode.svg";
 import Vue from "../../assets/programming/vue.svg";
 import VueX from "../../assets/programming/vuex.png";
@@ -93,6 +94,7 @@ const SkillSet = () => {
       icons: [
         { src: NextJs, name: "NextJs" },
         { src: Postman, name: "Postman" },
+        { src: Vite, name: "Vite" },
         { src: VSCode, name: "Visual Studio Code" },
       ],
     },
