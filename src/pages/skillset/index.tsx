@@ -7,6 +7,7 @@ import Header from "@/components/Header";
 import Chakra from "../../assets/programming/chakra.svg";
 import Git from "../../assets/programming/git.svg";
 import GitHub from "../../assets/programming/github.svg";
+import Grafana from "../../assets/programming/grafana.png";
 import Javascript from "../../assets/programming/javascript.svg";
 import Material from "../../assets/programming/material.svg";
 import MongoDb from "../../assets/programming/mongo.svg";
@@ -16,9 +17,11 @@ import NodeJs from "../../assets/programming/nodejs.svg";
 import PHP from "../../assets/programming/php.png";
 import PostgreSql from "../../assets/programming/postgresql.svg";
 import Postman from "../../assets/programming/postman.png";
+import Prometheus from "../../assets/programming/prometheus.png";
 import ReactJs from "../../assets/programming/react.svg";
 import Redux from "../../assets/programming/redux.svg";
 import Sass from "../../assets/programming/sass.svg";
+import Sentry from "../../assets/programming/sentry.png";
 import UniApp from "../../assets/programming/uniapp.png";
 import Uview from "../../assets/programming/uview.png";
 import Vercel from "../../assets/programming/vercel.svg";
@@ -77,6 +80,15 @@ const SkillSet = () => {
     },
 
     {
+      title: "Monitoring Tools",
+      icons: [
+        { src: Grafana, name: "Grafana" },
+        { src: Prometheus, name: "Prometheus" },
+        { src: Sentry, name: "Sentry" },
+      ],
+    },
+
+    {
       title: "Other Tools",
       icons: [
         { src: NextJs, name: "NextJs" },
@@ -100,17 +112,21 @@ const SkillSet = () => {
               {tool.icons.map((icon) => (
                 <div
                   key={icon.name}
-                  className=" w-1/2 sm:w-1/3 lg:w-1/4 xl:w-1/5 mb-8 cursor-pointer hover:scale-110"
+                  className=" w-1/2 sm:w-1/3 lg:w-1/4 xl:w-1/5 mb-8 cursor-pointer hover:scale-110 box-border"
                 >
-                  <Image
-                    src={icon.src}
-                    alt=""
-                    width={1000}
-                    height={1000}
-                    className={`w-3/5 mx-auto ${
-                      ["Uni-App", "PHP"].includes(icon.name) ? "scale-[.8]" : ""
-                    } `}
-                  />
+                  <div className=" aspect-square box-border mx-auto w-3/5 ">
+                    <Image
+                      src={icon.src}
+                      alt=""
+                      width={1000}
+                      height={1000}
+                      className={`h-full ${
+                        ["Uni-App", "PHP"].includes(icon.name)
+                          ? "scale-[.8]"
+                          : ""
+                      } `}
+                    />
+                  </div>
 
                   <div className=" font-medium">{icon.name}</div>
                 </div>
