@@ -20,7 +20,7 @@ const Home = () => {
         <div className=" flex flex-wrap justify-center items-center mt-4 sm:mt-8 mb-8 lg:mb-24 mx-4 sm:mx-0">
           <motion.div
             className="  font-bold w-full sm:w-2/3 text-center sm:text-left"
-            initial={{ x: -400, opacity: 0 }}
+            initial={{ x: -50, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -37,7 +37,7 @@ const Home = () => {
           </motion.div>
           <motion.div
             className="w-2/3 sm:w-1/3 mt-2 mb-4 sm:my-12"
-            initial={{ x: 400, opacity: 0 }}
+            initial={{ x: 50, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -55,7 +55,7 @@ const Home = () => {
         {/* second section  */}
         <div className="flex flex-wrap justify-center items-center sm:flex-row-reverse mb-24">
           <motion.div
-            initial={{ x: -400, opacity: 0 }}
+            initial={{ x: -50, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -86,7 +86,7 @@ const Home = () => {
             </div>
           </motion.div>
           <motion.div
-            initial={{ x: 400, opacity: 0 }}
+            initial={{ x: 50, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}

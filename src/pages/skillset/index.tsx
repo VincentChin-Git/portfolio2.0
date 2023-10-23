@@ -5,8 +5,10 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 
 import Chakra from "../../assets/programming/chakra.svg";
+import Firebase from "../../assets/programming/firebase.svg";
 import Git from "../../assets/programming/git.svg";
 import GitHub from "../../assets/programming/github.svg";
+import Golang from "../../assets/programming/go.svg";
 import Grafana from "../../assets/programming/grafana.png";
 import Javascript from "../../assets/programming/javascript.svg";
 import Material from "../../assets/programming/material.svg";
@@ -36,9 +38,11 @@ const SkillSet = () => {
       title: "Languages which I speak",
       icons: [
         { src: Javascript, name: "Javascript" },
+        { src: Golang, name: "Go" },
         { src: NodeJs, name: "NodeJs" },
         { src: PHP, name: "PHP" },
         { src: ReactJs, name: "ReactJs" },
+        { src: ReactJs, name: "ReactNative" },
         { src: Sass, name: "SASS" },
         { src: UniApp, name: "Uni-App" },
         { src: Vue, name: "Vue" },
@@ -92,6 +96,7 @@ const SkillSet = () => {
     {
       title: "Other Tools",
       icons: [
+        { src: Firebase, name: "Firebase" },
         { src: NextJs, name: "NextJs" },
         { src: Postman, name: "Postman" },
         { src: Vite, name: "Vite" },
