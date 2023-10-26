@@ -8,6 +8,9 @@ const SENDGRID_EMAIL_FROM = process.env.SENDGRID_EMAIL_FROM || "";
 const SENDGRID_EMAIL_TO = process.env.SENDGRID_EMAIL_TO || "";
 mailSender.setApiKey(SENDGRID_API_KEY);
 
+if (!SENDGRID_API_KEY) console.log("no sendgrid api key");
+else console.log("found api key!");
+
 export default async function (req: NextApiRequest, res: NextApiResponse) {
   const { name, email, msg } = req.body;
 

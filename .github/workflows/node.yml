@@ -1,10 +1,13 @@
 # This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
 # For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-nodejs
 
-name: NODE CI
+name: NODE CICD
 
 on: [push, pull_request]
-
+env:
+  SENDGRID_API_KEY: ${{ secrects.SENDGRID_API_KEY }}
+  SENDGRID_EMAIL_FROM: ${{ secrects.SENDGRID_EMAIL_FROM }}
+  SENDGRID_EMAIL_TO: ${{ secrects.SENDGRID_EMAIL_TO }}
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -22,8 +25,19 @@ jobs:
           node-version: ${{ matrix.node-version }}
           cache: "npm"
       - run: npm ci
-      - name: install, lint, build
+      - name: Install, Lint
         run: |
           npm install
           npm run lint
+      - name: Build
+        run: |
+          echo -e "SENDGRID_API_KEY=${{ secrects.SENDGRID_API_KEY }}\nSENDGRID_EMAIL_FROM=${{ secrects.SENDGRID_EMAIL_FROM }}\nSENDGRID_EMAIL_TO=${{ secrects.SENDGRID_EMAIL_TO }}" > .env.local
           npm run build
+      # - name: Deploy AWS
+      #   uses: easingthemes/ssh-deploy@main
+      #   env:
+      #     SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+      #     SOURCE: ".next/"
+      #     REMOTE_HOST: ${{ secrets.SSH_HOST }}
+      #     REMOTE_USER: ${{ secrets.USER }}
+      #     TARGET: /home/${{ secrets.USER }}/projects/portfolio
