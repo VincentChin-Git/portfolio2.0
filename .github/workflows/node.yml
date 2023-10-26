@@ -51,6 +51,8 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
             cd /home/${{ secrets.SSH_USER }}/projects/portfolio/
-            sudo npx kill-port 3000 || true
-            sudo npm install
-            sudo npm run start
+            export NVM_DIR=~/.nvm
+            source ~/.nvm/nvm.sh
+            npx kill-port 3000 || true
+            npm install
+            npm run start
