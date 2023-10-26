@@ -33,11 +33,11 @@ jobs:
         run: |
           echo -e "SENDGRID_API_KEY=${{ secrets.SENDGRID_API_KEY }}\nSENDGRID_EMAIL_FROM=${{ secrets.SENDGRID_EMAIL_FROM }}\nSENDGRID_EMAIL_TO=${{ secrets.SENDGRID_EMAIL_TO }}" > .env.local
           npm run build
-      # - name: Deploy AWS
-      #   uses: easingthemes/ssh-deploy@main
-      #   env:
-      #     SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-      #     SOURCE: ".next/"
-      #     REMOTE_HOST: ${{ secrets.SSH_HOST }}
-      #     REMOTE_USER: ${{ secrets.USER }}
-      #     TARGET: /home/${{ secrets.USER }}/projects/portfolio
+      - name: Deploy AWS
+        uses: easingthemes/ssh-deploy@main
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          SOURCE: ".next/"
+          REMOTE_HOST: ${{ secrets.SSH_HOST }}
+          REMOTE_USER: ${{ secrets.USER }}
+          TARGET: /home/${{ secrets.USER }}/projects/portfolio
