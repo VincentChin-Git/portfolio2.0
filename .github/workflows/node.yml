@@ -41,9 +41,11 @@ jobs:
           REMOTE_HOST: ${{ secrets.SSH_HOST }}
           REMOTE_USER: ${{ secrets.SSH_USER }}
           TARGET: /home/${{ secrets.SSH_USER }}/projects/portfolio
+          EXCLUDE: "/node_modules/"
       - name: Restart Server
         run: |
           echo "${{ secrets.SSH_PRIVATE_KEY }}" > key.pem
           chmod 600 key.pem
           ssh -i key.pem ${{ secrets.SSH_URL }} 'npx kill-port 3000 || true'
+          ssh -i key.pem ${{ secrets.SSH_URL }} 'cd projects/portfolio && npm install'
           ssh -i key.pem ${{ secrets.SSH_URL }} 'cd projects/portfolio && npm run start'
