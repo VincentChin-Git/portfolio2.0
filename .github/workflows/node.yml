@@ -46,6 +46,6 @@ jobs:
         run: |
           echo "${{ secrets.SSH_PRIVATE_KEY }}" > key.pem
           chmod 600 key.pem
-          ssh -i key.pem ${{ secrets.SSH_URL }} 'npx kill-port 3000 || true'
-          ssh -i key.pem ${{ secrets.SSH_URL }} 'cd projects/portfolio && npm install'
-          ssh -i key.pem ${{ secrets.SSH_URL }} 'cd projects/portfolio && npm run start'
+          ssh -o StrictHostKeyChecking=no -i key.pem ${{ secrets.SSH_URL }} 'npx kill-port 3000 || true'
+          ssh -o StrictHostKeyChecking=no -i key.pem ${{ secrets.SSH_URL }} 'cd projects/portfolio && npm install'
+          ssh -o StrictHostKeyChecking=no -i key.pem ${{ secrets.SSH_URL }} 'cd projects/portfolio && npm run start'
