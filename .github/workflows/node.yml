@@ -55,4 +55,4 @@ jobs:
             source ~/.nvm/nvm.sh
             npx kill-port 3000 || true
             npm install
-            npm run start
+            npm run start &
