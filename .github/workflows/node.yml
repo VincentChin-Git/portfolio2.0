@@ -53,6 +53,5 @@ jobs:
             cd /home/${{ secrets.SSH_USER }}/projects/portfolio/
             export NVM_DIR=~/.nvm
             source ~/.nvm/nvm.sh
-            npx kill-port 3000 || true
             npm install
-            npm run start &
+            pm2 restart portfolio
