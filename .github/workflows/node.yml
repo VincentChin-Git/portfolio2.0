@@ -5,9 +5,9 @@ name: NODE CICD
 
 on: [push, pull_request]
 env:
-  SENDGRID_API_KEY: ${{ secrects.SENDGRID_API_KEY }}
-  SENDGRID_EMAIL_FROM: ${{ secrects.SENDGRID_EMAIL_FROM }}
-  SENDGRID_EMAIL_TO: ${{ secrects.SENDGRID_EMAIL_TO }}
+  SENDGRID_API_KEY: ${{ secrets.SENDGRID_API_KEY }}
+  SENDGRID_EMAIL_FROM: ${{ secrets.SENDGRID_EMAIL_FROM }}
+  SENDGRID_EMAIL_TO: ${{ secrets.SENDGRID_EMAIL_TO }}
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -31,7 +31,7 @@ jobs:
           npm run lint
       - name: Build
         run: |
-          echo -e "SENDGRID_API_KEY=${{ secrects.SENDGRID_API_KEY }}\nSENDGRID_EMAIL_FROM=${{ secrects.SENDGRID_EMAIL_FROM }}\nSENDGRID_EMAIL_TO=${{ secrects.SENDGRID_EMAIL_TO }}" > .env.local
+          echo -e "SENDGRID_API_KEY=${{ secrets.SENDGRID_API_KEY }}\nSENDGRID_EMAIL_FROM=${{ secrets.SENDGRID_EMAIL_FROM }}\nSENDGRID_EMAIL_TO=${{ secrets.SENDGRID_EMAIL_TO }}" > .env.local
           npm run build
       # - name: Deploy AWS
       #   uses: easingthemes/ssh-deploy@main
