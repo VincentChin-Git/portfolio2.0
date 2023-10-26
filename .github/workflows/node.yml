@@ -14,7 +14,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [16.x, 18.x]
+        node-version: [18.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
@@ -39,5 +39,5 @@ jobs:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
           SOURCE: ".next/"
           REMOTE_HOST: ${{ secrets.SSH_HOST }}
-          REMOTE_USER: ${{ secrets.USER }}
-          TARGET: /home/${{ secrets.USER }}/projects/portfolio
+          REMOTE_USER: ${{ secrets.SSH_USER }}
+          TARGET: /home/${{ secrets.SSH_USER }}/projects/portfolio
