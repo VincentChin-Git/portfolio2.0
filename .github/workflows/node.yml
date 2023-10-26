@@ -42,10 +42,15 @@ jobs:
           REMOTE_USER: ${{ secrets.SSH_USER }}
           TARGET: /home/${{ secrets.SSH_USER }}/projects/portfolio
           EXCLUDE: "/node_modules/"
+
       - name: Restart Server
-        run: |
-          echo "${{ secrets.SSH_PRIVATE_KEY }}" > key.pem
-          chmod 600 key.pem
-          ssh -o StrictHostKeyChecking=no -i key.pem ${{ secrets.SSH_URL }} 'npx kill-port 3000 || true'
-          ssh -o StrictHostKeyChecking=no -i key.pem ${{ secrets.SSH_URL }} 'cd projects/portfolio && npm install'
-          ssh -o StrictHostKeyChecking=no -i key.pem ${{ secrets.SSH_URL }} 'cd projects/portfolio && npm run start'
+        uses: appleboy/ssh-action@master # 使用ssh链接服务器
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: |
+            cd /home/${{ secrets.SSH_USER }}/projects/portfolio/
+            sudo npx kill-port 3000 || true
+            sudo npm install
+            sudo npm run start
