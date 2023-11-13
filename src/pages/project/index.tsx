@@ -8,6 +8,7 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import dataProject1 from "@/utils/project_1";
 import dataProject2 from "@/utils/project_2";
+import dataProject3 from "@/utils/project_3";
 
 export default function Project() {
   const searchParams = useSearchParams();
@@ -18,6 +19,8 @@ export default function Project() {
       ? dataProject1
       : project == "2"
       ? dataProject2
+      : project == "3"
+      ? dataProject3
       : { title: "", desc: "", imgList: [] };
 
   useEffect(() => {
@@ -37,12 +40,12 @@ export default function Project() {
           {config.title}
         </div>
         <div className=" my-8 sm:text-xl mx-4">{config.desc}</div>
-        <div className=" flex flex-wrap justify-center items-center gap-y-8 ">
+        <div className=" flex flex-wrap  items-center gap-y-8 ">
           {config.imgList.map((img, iIndex) => {
             return (
               <div className=" w-full lg:w-1/2 box-border px-4 " key={iIndex}>
                 <Image
-                  className="hover:scale-110 cursor-pointer"
+                  className="hover:scale-110 cursor-pointer max-h-[400px] object-contain"
                   src={img.src}
                   alt=""
                 />

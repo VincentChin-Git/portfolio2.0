@@ -5,6 +5,7 @@ import P2 from "@/assets/projects/p2.png";
 import P3 from "@/assets/projects/p3.jpg";
 import P4 from "@/assets/projects/p4.png";
 import P5 from "@/assets/projects/p5.png";
+import P6 from "@/assets/projects/p6.jpg";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 
@@ -12,6 +13,7 @@ import ProjectElem from "./ProjectElem";
 
 export default function Project() {
   const projects = [
+    { title: "Expense Tracker", cover: P6, url: "/project?project=3" },
     { title: "Administration System", cover: P1, url: "/project?project=1" },
     { title: "E-Commerce Website", cover: P2, url: "/project?project=2" },
     {
