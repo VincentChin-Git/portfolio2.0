@@ -4,10 +4,7 @@
 name: NODE CICD
 
 on: [push, pull_request]
-env:
-  SENDGRID_API_KEY: ${{ secrets.SENDGRID_API_KEY }}
-  SENDGRID_EMAIL_FROM: ${{ secrets.SENDGRID_EMAIL_FROM }}
-  SENDGRID_EMAIL_TO: ${{ secrets.SENDGRID_EMAIL_TO }}
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -29,29 +26,3 @@ jobs:
         run: |
           npm install
           npm run lint
-      - name: Build
-        run: |
-          echo -e "SENDGRID_API_KEY=${{ secrets.SENDGRID_API_KEY }}\nSENDGRID_EMAIL_FROM=${{ secrets.SENDGRID_EMAIL_FROM }}\nSENDGRID_EMAIL_TO=${{ secrets.SENDGRID_EMAIL_TO }}" > .env.local
-          npm run build
-      - name: Deploy AWS
-        uses: easingthemes/ssh-deploy@main
-        env:
-          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-          SOURCE: "/"
-          REMOTE_HOST: ${{ secrets.SSH_HOST }}
-          REMOTE_USER: ${{ secrets.SSH_USER }}
-          TARGET: /home/${{ secrets.SSH_USER }}/projects/portfolio
-          EXCLUDE: "/node_modules/"
-
-      - name: Restart Server
-        uses: appleboy/ssh-action@master # 使用ssh链接服务器
-        with:
-          host: ${{ secrets.SSH_HOST }}
-          username: ${{ secrets.SSH_USER }}
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
-          script: |
-            cd /home/${{ secrets.SSH_USER }}/projects/portfolio/
-            export NVM_DIR=~/.nvm
-            source ~/.nvm/nvm.sh
-            npm install
-            pm2 restart portfolio
