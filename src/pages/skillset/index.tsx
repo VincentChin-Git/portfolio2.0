@@ -4,6 +4,9 @@ import { NextSeo } from "next-seo";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 
+import AwsEC2 from "../../assets/programming/aws_ec2.jpeg";
+import AwsRoute53 from "../../assets/programming/aws_route53.png";
+import AwsS3 from "../../assets/programming/aws_s3.svg";
 import Chakra from "../../assets/programming/chakra.svg";
 import Firebase from "../../assets/programming/firebase.svg";
 import Git from "../../assets/programming/git.svg";
@@ -94,6 +97,15 @@ const SkillSet = () => {
     },
 
     {
+      title: "AWS",
+      icons: [
+        { src: AwsEC2, name: "AWS EC2" },
+        { src: AwsRoute53, name: "AWS Route 53" },
+        { src: AwsS3, name: "AWS S3 Bucket" },
+      ],
+    },
+
+    {
       title: "Other Tools",
       icons: [
         { src: Firebase, name: "Firebase" },
@@ -127,7 +139,7 @@ const SkillSet = () => {
                       alt=""
                       width={1000}
                       height={1000}
-                      className={`h-full ${
+                      className={` rounded-2xl h-full ${
                         ["Uni-App", "PHP"].includes(icon.name)
                           ? "scale-[.8]"
                           : ""
