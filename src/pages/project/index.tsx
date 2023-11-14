@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { Image } from "antd";
 import { useSearchParams } from "next/navigation";
 import { useRouter } from "next/router";
 import { NextSeo } from "next-seo";
