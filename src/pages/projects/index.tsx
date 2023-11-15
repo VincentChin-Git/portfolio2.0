@@ -46,30 +46,40 @@ export default function Project() {
         </div>
 
         <div className="my-8 sm:text-xl mx-4">
-          During my career, I have done 3 major projects{" "}
-          <span className=" font-bold">independently</span>. One of them is an
-          <span className=" font-bold">e-commerce website</span> for the
-          printing industry, which includes product category, product details,
-          item checkout etc. We design different product types for our clients.
+          <span>During my career, I have done 3 major projects </span>
+          <span className=" font-bold">independently</span>
+          <span>. One of them is an </span>
+          <span className=" font-bold">e-commerce website </span>
+          <span>
+            for the printing industry, which includes product category, product
+            details, item checkout etc. We design different product types for
+            our clients.
+          </span>
         </div>
 
         <div className="my-8 sm:text-xl mx-4">
-          Another one is the{" "}
-          <span className=" font-bold">administration system</span>, which was
-          built for internal use of our clients. We provide a few major
-          functions like customer management, quotation & invoices, product &
-          stock management and staff management, just to name a few.
+          <span>Another one is the </span>
+          <span className=" font-bold">administration system</span>
+          <span>
+            , which was built for internal use of our clients. We provide a few
+            major functions like customer management, quotation & invoices,
+            product & stock management and staff management, just to name a few.
+          </span>
         </div>
 
         <div className="my-8 sm:text-xl mx-4">
-          And finally, there&apos;s an{" "}
-          <span className=" font-bold">expense tracker mobile app</span> I&apos;m
-          developing using <span className=" font-bold">React Native</span>,{" "}
-          <span className=" font-bold">Redux</span>, and{" "}
-          <span className=" font-bold">Firebase</span>. This app features
-          expense and income recording, budget setting, and monthly data
-          analysis capabilities. It aids in tracking and provides insights into
-          your financial flow.
+          <span>And finally, there&apos;s an </span>
+          <span className=" font-bold">expense tracker mobile app </span>
+          <span>I&apos;m developing using </span>
+          <span className=" font-bold">React Native</span>,
+          <span className=" font-bold"> Redux</span>
+          <span>, and </span>
+          <span className=" font-bold">Firebase</span>
+          <span>
+            . This app features expense and income recording, budget setting,
+            and monthly data analysis capabilities. It aids in tracking and
+            provides insights into your financial flow.
+          </span>
         </div>
 
         <div className="my-8 sm:text-xl mx-4 text-left">
