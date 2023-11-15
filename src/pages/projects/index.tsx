@@ -62,8 +62,8 @@ export default function Project() {
         </div>
 
         <div className="my-8 sm:text-xl mx-4">
-          And finally, there's an{" "}
-          <span className=" font-bold">expense tracker mobile app</span> I'm
+          And finally, there&apos;s an{" "}
+          <span className=" font-bold">expense tracker mobile app</span> I&apos;m
           developing using <span className=" font-bold">React Native</span>,{" "}
           <span className=" font-bold">Redux</span>, and{" "}
           <span className=" font-bold">Firebase</span>. This app features
@@ -73,7 +73,7 @@ export default function Project() {
         </div>
 
         <div className="my-8 sm:text-xl mx-4 text-left">
-          PS: Current career's projects are excluded.
+          PS: Current career&apos;s projects are excluded.
         </div>
 
         <div className="  box-border flex flex-wrap items-center my-8">
