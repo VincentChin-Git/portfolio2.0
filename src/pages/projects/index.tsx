@@ -42,21 +42,38 @@ export default function Project() {
 
       <div className=" container mx-auto mt-12 text-center">
         <div className="my-8 font-bold text-2xl sm:text-3xl">
-          My Recent Project
+          My Recent Projects
         </div>
 
         <div className="my-8 sm:text-xl mx-4">
-          During my career, I have done 2 major projects independently. One of
-          them is an e-commerce website for the printing industry, which
-          includes product category, product details, item checkout etc. We
-          design different product types for our clients.
+          During my career, I have done 3 major projects{" "}
+          <span className=" font-bold">independently</span>. One of them is an
+          <span className=" font-bold">e-commerce website</span> for the
+          printing industry, which includes product category, product details,
+          item checkout etc. We design different product types for our clients.
         </div>
 
         <div className="my-8 sm:text-xl mx-4">
-          Another one is the administration system, which was built for internal
-          use of our clients. We provide a few major functions like customer
-          management, quotation & invoices, product & stock management and staff
-          management, just to name a few.
+          Another one is the{" "}
+          <span className=" font-bold">administration system</span>, which was
+          built for internal use of our clients. We provide a few major
+          functions like customer management, quotation & invoices, product &
+          stock management and staff management, just to name a few.
+        </div>
+
+        <div className="my-8 sm:text-xl mx-4">
+          And finally, there's an{" "}
+          <span className=" font-bold">expense tracker mobile app</span> I'm
+          developing using <span className=" font-bold">React Native</span>,{" "}
+          <span className=" font-bold">Redux</span>, and{" "}
+          <span className=" font-bold">Firebase</span>. This app features
+          expense and income recording, budget setting, and monthly data
+          analysis capabilities. It aids in tracking and provides insights into
+          your financial flow.
+        </div>
+
+        <div className="my-8 sm:text-xl mx-4 text-left">
+          PS: Current career's projects are excluded.
         </div>
 
         <div className="  box-border flex flex-wrap items-center my-8">
