@@ -53,6 +53,7 @@ const dataProject2 = {
     { src: "/projects/project_2/p2_18.png", name: "Choose Delivery Method" },
     { src: "/projects/project_2/p2_19.png", name: "View Uploaded Artwork" },
   ],
+  downloadLink: "",
 };
 
 export default dataProject2;

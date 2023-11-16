@@ -100,6 +100,7 @@ const dataProject1 = {
     { src: "/projects/project_1/p1_78.png", name: "New Workgroup" },
     { src: "/projects/project_1/p1_79.png", name: "Edit Workgroup" },
   ],
+  downloadLink: "",
 };
 
 export default dataProject1;

@@ -1,5 +1,5 @@
 const dataProject3 = {
-  title: "Expense Tracker",
+  title: "Budget Beam",
   desc: "An expense tracker app which made from React Native & Firebase.",
   imgList: [
     { src: "/projects/project_3/p3_01.jpg", name: "Register Page" },
@@ -11,8 +11,9 @@ const dataProject3 = {
     { src: "/projects/project_3/p3_07.jpg", name: "Profile Page" },
     { src: "/projects/project_3/p3_08.jpg", name: "Setting Page - Name" },
     { src: "/projects/project_3/p3_09.jpg", name: "Setting Page - Budget" },
-    { src: "/projects/project_3/p3_10.png", name: "Download QRCode" },
   ],
+  downloadLink:
+    "https://bucket-chat-1101.s3.ap-southeast-1.amazonaws.com/apk/budgetbeam.apk",
 };
 
 export default dataProject3;

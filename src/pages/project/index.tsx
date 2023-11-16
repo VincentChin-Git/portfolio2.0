@@ -21,7 +21,7 @@ export default function Project() {
       ? dataProject2
       : project == "3"
       ? dataProject3
-      : { title: "", desc: "", imgList: [] };
+      : { title: "", desc: "", imgList: [], downloadLink: "" };
 
   useEffect(() => {
     if (!project) router.push("/");
@@ -40,7 +40,15 @@ export default function Project() {
           {config.title}
         </div>
         <div className=" my-8 sm:text-xl mx-4">{config.desc}</div>
-        <div className=" flex flex-wrap  items-center gap-y-8 ">
+        {config.downloadLink && (
+          <a
+            className="text-primary font-semibold underline"
+            href={config.downloadLink}
+          >
+            App Preview
+          </a>
+        )}
+        <div className=" flex flex-wrap  items-center gap-y-8 my-8">
           {config.imgList.map((img, iIndex) => {
             return (
               <div className=" w-full lg:w-1/2 box-border px-4 " key={iIndex}>
