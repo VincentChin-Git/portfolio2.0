@@ -14,6 +14,7 @@ import GitHub from "../../assets/programming/github.svg";
 import Golang from "../../assets/programming/go.svg";
 import Grafana from "../../assets/programming/grafana.png";
 import Javascript from "../../assets/programming/javascript.svg";
+import Lalamove from "../../assets/programming/lalamove.png";
 import Material from "../../assets/programming/material.svg";
 import MongoDb from "../../assets/programming/mongo.svg";
 import MySql from "../../assets/programming/mysql.png";
@@ -27,6 +28,7 @@ import ReactJs from "../../assets/programming/react.svg";
 import Redux from "../../assets/programming/redux.svg";
 import Sass from "../../assets/programming/sass.svg";
 import Sentry from "../../assets/programming/sentry.png";
+import Stripe from "../../assets/programming/stripe.svg";
 import UniApp from "../../assets/programming/uniapp.png";
 import Uview from "../../assets/programming/uview.png";
 import Vercel from "../../assets/programming/vercel.svg";
@@ -46,7 +48,6 @@ const SkillSet = () => {
         { src: PHP, name: "PHP" },
         { src: ReactJs, name: "ReactJs" },
         { src: ReactJs, name: "ReactNative" },
-        { src: Sass, name: "SASS" },
         { src: UniApp, name: "Uni-App" },
         { src: Vue, name: "Vue" },
       ],
@@ -67,15 +68,6 @@ const SkillSet = () => {
         { src: Git, name: "Git" },
         { src: GitHub, name: "GitHub" },
         { src: Vercel, name: "Vercel" },
-      ],
-    },
-
-    {
-      title: "UI Tools",
-      icons: [
-        { src: Chakra, name: "Chakra UI" },
-        { src: Material, name: "Material UI" },
-        { src: Uview, name: "UView UI" },
       ],
     },
 
@@ -102,6 +94,14 @@ const SkillSet = () => {
         { src: AwsEC2, name: "AWS EC2" },
         { src: AwsRoute53, name: "AWS Route 53" },
         { src: AwsS3, name: "AWS S3 Bucket" },
+      ],
+    },
+
+    {
+      title: "Third Party API",
+      icons: [
+        { src: Lalamove, name: "Lalamove" },
+        { src: Stripe, name: "Stripe" },
       ],
     },
 
