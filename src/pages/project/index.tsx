@@ -9,19 +9,34 @@ import Header from "@/components/Header";
 import dataProject1 from "@/utils/project_1";
 import dataProject2 from "@/utils/project_2";
 import dataProject3 from "@/utils/project_3";
+import dataProject4 from "@/utils/project_4";
 
 export default function Project() {
   const searchParams = useSearchParams();
   const project = searchParams.get("project");
   const router = useRouter();
-  const config =
-    project == "1"
-      ? dataProject1
-      : project == "2"
-      ? dataProject2
-      : project == "3"
-      ? dataProject3
-      : { title: "", desc: "", imgList: [], downloadLink: "" };
+  let config: {
+    title: string;
+    desc: string;
+    imgList: { src: string; name: string }[];
+    downloadLink: string;
+  };
+  switch (project) {
+    case "1":
+      config = dataProject1;
+      break;
+    case "2":
+      config = dataProject2;
+      break;
+    case "3":
+      config = dataProject3;
+      break;
+    case "4":
+      config = dataProject4;
+      break;
+    default:
+      config = { title: "", desc: "", imgList: [], downloadLink: "" };
+  }
 
   useEffect(() => {
     if (!project) router.push("/");
