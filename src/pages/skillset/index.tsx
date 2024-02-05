@@ -26,6 +26,7 @@ import ReactJs from "../../assets/programming/react.svg";
 import Redux from "../../assets/programming/redux.svg";
 import Sentry from "../../assets/programming/sentry.png";
 import Stripe from "../../assets/programming/stripe.svg";
+import Typescript from "../../assets/programming/typescript.svg";
 import UniApp from "../../assets/programming/uniapp.png";
 import Vercel from "../../assets/programming/vercel.svg";
 import Vite from "../../assets/programming/vite.png";
@@ -44,6 +45,7 @@ const SkillSet = () => {
         { src: PHP, name: "PHP" },
         { src: ReactJs, name: "ReactJs" },
         { src: ReactJs, name: "ReactNative" },
+        { src: Typescript, name: "Typescript" },
         { src: UniApp, name: "Uni-App" },
         { src: Vue, name: "Vue" },
       ],
@@ -136,7 +138,7 @@ const SkillSet = () => {
                       width={1000}
                       height={1000}
                       className={` rounded-2xl h-full ${
-                        ["Uni-App", "PHP"].includes(icon.name)
+                        ["Uni-App", "PHP", "Typescript"].includes(icon.name)
                           ? "scale-[.8]"
                           : ""
                       } `}
